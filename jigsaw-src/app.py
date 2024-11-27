@@ -17,7 +17,9 @@ def read_text():
     try:
         request_data = json.loads(app.current_request.raw_body)
         text_data = request_data['text']
-        # model.test_model()
+        model_obj = model.predict_toxicity_from_s3(storage_location, model_file_uri, vector_file_uri)
+        toxicity = model_obj.is_toxic(text_data)
+        return True if toxicity>0.7 else False
     except Exception as err:
         return('Some error occured ', err)
 
