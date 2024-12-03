@@ -55,31 +55,34 @@ root/
    cd jigsaw-ui
 
 2. Install dependencies:
-npm install
-# or
-yarn install
-
+```bash
+   npm install
+   or
+   yarn install
+```
 3. Create a .env.local file in the jigsaw-ui directory and add the following:
-NEXT_PUBLIC_API_URL=https://<API_GATEWAY>.execute-api.us-east-1.amazonaws
-
+```bash
+   NEXT_PUBLIC_API_URL=https://<API_GATEWAY>.execute-api.us-east-1.amazonaws
+```
 4. Run the development server:
-npm run dev
-# or
-yarn dev
-
+```bash
+   npm run dev
+   #or
+   yarn dev
+```
 5. Open the app in your browser at http://localhost:3000.
 
-How It Works
+## How It Works
 User Interaction: Users type messages and submit them via a form.
 Censorship Check: Messages are sent to the backend API, which returns whether the message should be censored.
 Message Rendering: Messages are displayed in the chat area, with censored messages replaced by *** [censored] ***.
 Simulated Activity: Auto-generated messages from simulated users keep the chat active.
 
-Customization
+## Customization
 Update the API: Modify the censorship logic in the checkMessageCensorship function located in jigsaw-ui/pages/index.tsx.
 Change UI Design: Update styles or components in the jigsaw-ui/components directory.
 
-Troubleshooting
+## Troubleshooting
 CORS Issues: Verify that the backend API supports preflight OPTIONS requests and includes correct CORS headers.
 API Endpoint: Ensure the NEXT_PUBLIC_API_URL in .env.local points to the correct API endpoint.
 Logs and Debugging: Use browser DevTools to inspect API requests and responses.
