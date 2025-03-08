@@ -1,4 +1,4 @@
-# Gaming Chat App
+# Toxic chat detection
 
 The **Gaming Chat App** is a real-time chat application designed for gamers, built with **Next.js**. It enables users to send and receive messages in a gaming environment with built-in censorship functionality using a backend API. The project is structured into two main directories: `jigsaw-ui` for the user interface and `jigsaw-src` for other project resources.
 Live demo: https://mswecqzn69mxfhz8gbehhwrtonzx0to3.vercel.app/
